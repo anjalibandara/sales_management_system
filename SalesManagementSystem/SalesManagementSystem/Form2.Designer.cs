@@ -1,0 +1,308 @@
+﻿namespace SalesManagementSystem
+{
+    partial class mainForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
+            flowLayoutPanel1 = new Panel();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            userControlButton6 = new UserControlButton();
+            userControlButton4 = new UserControlButton();
+            userControlButton3 = new UserControlButton();
+            userControlButton2 = new UserControlButton();
+            userControlButton1 = new UserControlButton();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            panel2 = new Panel();
+            panelMain = new Panel();
+            flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)userControlButton6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)userControlButton4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)userControlButton3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)userControlButton2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)userControlButton1).BeginInit();
+            SuspendLayout();
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.BackColor = Color.White;
+            flowLayoutPanel1.Controls.Add(label10);
+            flowLayoutPanel1.Controls.Add(label9);
+            flowLayoutPanel1.Controls.Add(label8);
+            flowLayoutPanel1.Controls.Add(label7);
+            flowLayoutPanel1.Controls.Add(label6);
+            flowLayoutPanel1.Controls.Add(userControlButton6);
+            flowLayoutPanel1.Controls.Add(userControlButton4);
+            flowLayoutPanel1.Controls.Add(userControlButton3);
+            flowLayoutPanel1.Controls.Add(userControlButton2);
+            flowLayoutPanel1.Controls.Add(userControlButton1);
+            flowLayoutPanel1.Controls.Add(label5);
+            flowLayoutPanel1.Controls.Add(label4);
+            flowLayoutPanel1.Controls.Add(label3);
+            flowLayoutPanel1.Controls.Add(label2);
+            flowLayoutPanel1.Controls.Add(label1);
+            flowLayoutPanel1.Dock = DockStyle.Top;
+            flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1042, 125);
+            flowLayoutPanel1.TabIndex = 0;
+            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = Color.Yellow;
+            label10.Location = new Point(743, 87);
+            label10.Name = "label10";
+            label10.Size = new Size(73, 20);
+            label10.TabIndex = 22;
+            label10.Text = "OREDERS";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.Yellow;
+            label9.Location = new Point(662, 87);
+            label9.Name = "label9";
+            label9.Size = new Size(52, 20);
+            label9.TabIndex = 21;
+            label9.Text = "USERS";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.Yellow;
+            label8.Location = new Point(543, 87);
+            label8.Name = "label8";
+            label8.Size = new Size(93, 20);
+            label8.TabIndex = 20;
+            label8.Text = "CATEGORIES";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Yellow;
+            label7.Location = new Point(442, 87);
+            label7.Name = "label7";
+            label7.Size = new Size(92, 20);
+            label7.TabIndex = 19;
+            label7.Text = "CUSTOMERS";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Yellow;
+            label6.Location = new Point(345, 87);
+            label6.Name = "label6";
+            label6.Size = new Size(75, 20);
+            label6.TabIndex = 18;
+            label6.Text = "PRODUCT";
+            // 
+            // userControlButton6
+            // 
+            userControlButton6.Image = (Image)resources.GetObject("userControlButton6.Image");
+            userControlButton6.ImageHover = (Image)resources.GetObject("userControlButton6.ImageHover");
+            userControlButton6.ImageNormal = (Image)resources.GetObject("userControlButton6.ImageNormal");
+            userControlButton6.Location = new Point(743, 12);
+            userControlButton6.Name = "userControlButton6";
+            userControlButton6.Size = new Size(69, 62);
+            userControlButton6.SizeMode = PictureBoxSizeMode.Zoom;
+            userControlButton6.TabIndex = 17;
+            userControlButton6.TabStop = false;
+            // 
+            // userControlButton4
+            // 
+            userControlButton4.Image = (Image)resources.GetObject("userControlButton4.Image");
+            userControlButton4.ImageHover = (Image)resources.GetObject("userControlButton4.ImageHover");
+            userControlButton4.ImageNormal = (Image)resources.GetObject("userControlButton4.ImageNormal");
+            userControlButton4.Location = new Point(645, 12);
+            userControlButton4.Name = "userControlButton4";
+            userControlButton4.Size = new Size(69, 62);
+            userControlButton4.SizeMode = PictureBoxSizeMode.Zoom;
+            userControlButton4.TabIndex = 15;
+            userControlButton4.TabStop = false;
+            // 
+            // userControlButton3
+            // 
+            userControlButton3.Image = (Image)resources.GetObject("userControlButton3.Image");
+            userControlButton3.ImageHover = (Image)resources.GetObject("userControlButton3.ImageHover");
+            userControlButton3.ImageNormal = (Image)resources.GetObject("userControlButton3.ImageNormal");
+            userControlButton3.Location = new Point(543, 12);
+            userControlButton3.Name = "userControlButton3";
+            userControlButton3.Size = new Size(69, 62);
+            userControlButton3.SizeMode = PictureBoxSizeMode.Zoom;
+            userControlButton3.TabIndex = 14;
+            userControlButton3.TabStop = false;
+            // 
+            // userControlButton2
+            // 
+            userControlButton2.Image = (Image)resources.GetObject("userControlButton2.Image");
+            userControlButton2.ImageHover = (Image)resources.GetObject("userControlButton2.ImageHover");
+            userControlButton2.ImageNormal = (Image)resources.GetObject("userControlButton2.ImageNormal");
+            userControlButton2.Location = new Point(442, 12);
+            userControlButton2.Name = "userControlButton2";
+            userControlButton2.Size = new Size(69, 62);
+            userControlButton2.SizeMode = PictureBoxSizeMode.Zoom;
+            userControlButton2.TabIndex = 13;
+            userControlButton2.TabStop = false;
+            // 
+            // userControlButton1
+            // 
+            userControlButton1.Image = (Image)resources.GetObject("userControlButton1.Image");
+            userControlButton1.ImageHover = (Image)resources.GetObject("userControlButton1.ImageHover");
+            userControlButton1.ImageNormal = (Image)resources.GetObject("userControlButton1.ImageNormal");
+            userControlButton1.Location = new Point(345, 12);
+            userControlButton1.Name = "userControlButton1";
+            userControlButton1.Size = new Size(69, 62);
+            userControlButton1.SizeMode = PictureBoxSizeMode.Zoom;
+            userControlButton1.TabIndex = 0;
+            userControlButton1.TabStop = false;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.White;
+            label5.Font = new Font("Showcard Gothic", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Red;
+            label5.Location = new Point(33, 28);
+            label5.Name = "label5";
+            label5.Size = new Size(161, 59);
+            label5.TabIndex = 0;
+            label5.Text = "inter";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Showcard Gothic", 25.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(48, 33);
+            label4.Name = "label4";
+            label4.Size = new Size(0, 54);
+            label4.TabIndex = 0;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Brown;
+            label3.Location = new Point(0, 87);
+            label3.Name = "label3";
+            label3.Size = new Size(287, 31);
+            label3.TabIndex = 12;
+            label3.Text = "Sales Management System";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Showcard Gothic", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(33, 33);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 54);
+            label2.TabIndex = 11;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Showcard Gothic", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Red;
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(71, 74);
+            label1.TabIndex = 10;
+            label1.Text = "V";
+            label1.Click += label1_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Red;
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(0, 482);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1042, 24);
+            panel2.TabIndex = 1;
+            // 
+            // panelMain
+            // 
+            panelMain.Location = new Point(-7, 129);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(1042, 347);
+            panelMain.TabIndex = 2;
+            panelMain.Paint += panelMain_Paint;
+            // 
+            // mainForm
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLight;
+            ClientSize = new Size(1042, 506);
+            Controls.Add(panelMain);
+            Controls.Add(panel2);
+            Controls.Add(flowLayoutPanel1);
+            Name = "mainForm";
+            Text = "Form2";
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)userControlButton6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)userControlButton4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)userControlButton3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)userControlButton2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)userControlButton1).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private Panel flowLayoutPanel1;
+        private Panel panel2;
+        private Panel panelMain;
+        private Label label1;
+        private Label label3;
+        private Label label2;
+        private Label label5;
+        private Label label4;
+        private UserControlButton userControlButton1;
+        private Label label10;
+        private Label label9;
+        private Label label8;
+        private Label label7;
+        private Label label6;
+        private UserControlButton userControlButton6;
+        private UserControlButton userControlButton4;
+        private UserControlButton userControlButton3;
+        private UserControlButton userControlButton2;
+    }
+}
