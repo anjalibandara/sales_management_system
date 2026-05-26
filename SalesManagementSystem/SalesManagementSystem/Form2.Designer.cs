@@ -260,9 +260,10 @@
             // 
             // panelMain
             // 
-            panelMain.Location = new Point(-7, 129);
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(0, 125);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(1042, 347);
+            panelMain.Size = new Size(1042, 357);
             panelMain.TabIndex = 2;
             panelMain.Paint += panelMain_Paint;
             // 

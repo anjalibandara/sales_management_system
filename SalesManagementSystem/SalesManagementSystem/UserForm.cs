@@ -50,7 +50,7 @@ namespace SalesManagementSystem
             if (colName == "Edit")
             {
                 UserModuleForm userModule = new UserModuleForm();
-            
+
                 userModule.textUserName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 userModule.textFullName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 userModule.textPass.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -61,7 +61,7 @@ namespace SalesManagementSystem
                 userModule.ShowDialog();
 
             }
-            else if(colName=="Delete")
+            else if (colName == "Delete")
                 if (MessageBox.Show("Are you sure you want to delete this user?", "Delete User", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     con.Open();
@@ -74,7 +74,7 @@ namespace SalesManagementSystem
                 }
             { }
         }
-            
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -85,6 +85,21 @@ namespace SalesManagementSystem
         }
 
         private void UserForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

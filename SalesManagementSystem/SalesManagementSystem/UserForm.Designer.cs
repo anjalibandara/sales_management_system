@@ -39,10 +39,12 @@
             Column4 = new DataGridViewTextBoxColumn();
             Edit = new DataGridViewImageColumn();
             Delete = new DataGridViewImageColumn();
+            panel2 = new Panel();
             label1 = new Label();
             btnAdd = new UserControlButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnAdd).BeginInit();
             SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(900, 373);
+            panel1.Size = new Size(1046, 256);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -78,7 +80,7 @@
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(900, 358);
+            dataGridView1.Size = new Size(1042, 326);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -140,16 +142,29 @@
             Delete.Name = "Delete";
             Delete.Width = 6;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.DodgerBlue;
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(btnAdd);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.ForeColor = Color.Coral;
+            panel2.Location = new Point(0, 300);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1046, 127);
+            panel2.TabIndex = 3;
+            panel2.Paint += panel2_Paint;
+            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Dock = DockStyle.Bottom;
+            label1.BackColor = Color.DodgerBlue;
             label1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(0, 426);
+            label1.Location = new Point(46, 63);
             label1.Name = "label1";
             label1.Size = new Size(148, 23);
-            label1.TabIndex = 1;
+            label1.TabIndex = 3;
             label1.Text = "Manage Users";
             // 
             // btnAdd
@@ -157,23 +172,21 @@
             btnAdd.Image = (Image)resources.GetObject("btnAdd.Image");
             btnAdd.ImageHover = (Image)resources.GetObject("btnAdd.ImageHover");
             btnAdd.ImageNormal = (Image)resources.GetObject("btnAdd.ImageNormal");
-            btnAdd.Location = new Point(853, 398);
+            btnAdd.Location = new Point(848, 47);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(34, 39);
             btnAdd.SizeMode = PictureBoxSizeMode.Zoom;
-            btnAdd.TabIndex = 2;
+            btnAdd.TabIndex = 4;
             btnAdd.TabStop = false;
-            btnAdd.Click += btnAdd_Click;
             // 
             // UserForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Blue;
-            ClientSize = new Size(900, 449);
-            Controls.Add(btnAdd);
-            Controls.Add(label1);
+            BackColor = Color.LightSlateGray;
+            ClientSize = new Size(1046, 427);
             Controls.Add(panel1);
+            Controls.Add(panel2);
             Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
             Name = "UserForm";
@@ -181,9 +194,10 @@
             Load += UserForm_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnAdd).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -199,5 +213,6 @@
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewImageColumn Edit;
         private DataGridViewImageColumn Delete;
+        private Panel panel2;
     }
 }
