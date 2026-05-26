@@ -30,6 +30,7 @@
         {
             label1 = new Label();
             panel1 = new Panel();
+            pictureBoxClose = new PictureBox();
             label2 = new Label();
             label3 = new Label();
             textUserName = new TextBox();
@@ -43,6 +44,7 @@
             btnUpdate = new Button();
             btnClear = new Button();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxClose).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -56,12 +58,23 @@
             // panel1
             // 
             panel1.BackColor = Color.Red;
+            panel1.Controls.Add(pictureBoxClose);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(667, 88);
             panel1.TabIndex = 1;
+            // 
+            // pictureBoxClose
+            // 
+            pictureBoxClose.Image = Properties.Resources.cancel;
+            pictureBoxClose.Location = new Point(641, 3);
+            pictureBoxClose.Name = "pictureBoxClose";
+            pictureBoxClose.Size = new Size(23, 31);
+            pictureBoxClose.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxClose.TabIndex = 11;
+            pictureBoxClose.TabStop = false;
             // 
             // label2
             // 
@@ -82,7 +95,7 @@
             label3.Size = new Size(89, 20);
             label3.TabIndex = 2;
             label3.Text = "User Name :";
-            label3.Click += label3_Click;
+            //label3.Click += label3_Click;
             // 
             // textUserName
             // 
@@ -90,7 +103,7 @@
             textUserName.Name = "textUserName";
             textUserName.Size = new Size(513, 27);
             textUserName.TabIndex = 3;
-            textUserName.TextChanged += textBox1_TextChanged;
+            //textUserName.TextChanged += textBox1_TextChanged;
             // 
             // label4
             // 
@@ -150,6 +163,7 @@
             btnSave.TabIndex = 10;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
             // 
             // btnUpdate
             // 
@@ -197,6 +211,7 @@
             Text = "UserModuleForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxClose).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -217,5 +232,6 @@
         private Button btnSave;
         private Button btnUpdate;
         private Button btnClear;
+        private PictureBox pictureBoxClose;
     }
 }
