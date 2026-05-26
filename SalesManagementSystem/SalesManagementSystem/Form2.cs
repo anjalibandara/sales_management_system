@@ -15,9 +15,25 @@ namespace SalesManagementSystem
             InitializeComponent();
         }
 
-        private void mainForm_Load(object sender, EventArgs e)
+        //to show subform in main form
+        private Form activeForm = null;
+        public void openChildForm(Form childForm)
         {
-
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(childForm);
+            panelMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            { }
+        }
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            openChildForm(new UserForm());
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -41,6 +57,21 @@ namespace SalesManagementSystem
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            openChildForm(new UserForm());
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
         {
 
         }

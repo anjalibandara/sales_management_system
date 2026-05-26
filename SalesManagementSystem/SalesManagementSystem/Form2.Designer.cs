@@ -35,11 +35,11 @@
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
-            userControlButton6 = new UserControlButton();
-            userControlButton4 = new UserControlButton();
-            userControlButton3 = new UserControlButton();
-            userControlButton2 = new UserControlButton();
-            userControlButton1 = new UserControlButton();
+            btnOrders = new UserControlButton();
+            btnUsers = new UserControlButton();
+            btnCategory = new UserControlButton();
+            btnCustomer = new UserControlButton();
+            btnProduct = new UserControlButton();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -48,11 +48,11 @@
             panel2 = new Panel();
             panelMain = new Panel();
             flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)userControlButton6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)userControlButton4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)userControlButton3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)userControlButton2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)userControlButton1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnOrders).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnUsers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnCategory).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnCustomer).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnProduct).BeginInit();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -63,11 +63,11 @@
             flowLayoutPanel1.Controls.Add(label8);
             flowLayoutPanel1.Controls.Add(label7);
             flowLayoutPanel1.Controls.Add(label6);
-            flowLayoutPanel1.Controls.Add(userControlButton6);
-            flowLayoutPanel1.Controls.Add(userControlButton4);
-            flowLayoutPanel1.Controls.Add(userControlButton3);
-            flowLayoutPanel1.Controls.Add(userControlButton2);
-            flowLayoutPanel1.Controls.Add(userControlButton1);
+            flowLayoutPanel1.Controls.Add(btnOrders);
+            flowLayoutPanel1.Controls.Add(btnUsers);
+            flowLayoutPanel1.Controls.Add(btnCategory);
+            flowLayoutPanel1.Controls.Add(btnCustomer);
+            flowLayoutPanel1.Controls.Add(btnProduct);
             flowLayoutPanel1.Controls.Add(label5);
             flowLayoutPanel1.Controls.Add(label4);
             flowLayoutPanel1.Controls.Add(label3);
@@ -130,65 +130,68 @@
             label6.TabIndex = 18;
             label6.Text = "PRODUCT";
             // 
-            // userControlButton6
+            // btnOrders
             // 
-            userControlButton6.Image = (Image)resources.GetObject("userControlButton6.Image");
-            userControlButton6.ImageHover = (Image)resources.GetObject("userControlButton6.ImageHover");
-            userControlButton6.ImageNormal = (Image)resources.GetObject("userControlButton6.ImageNormal");
-            userControlButton6.Location = new Point(743, 12);
-            userControlButton6.Name = "userControlButton6";
-            userControlButton6.Size = new Size(69, 62);
-            userControlButton6.SizeMode = PictureBoxSizeMode.Zoom;
-            userControlButton6.TabIndex = 17;
-            userControlButton6.TabStop = false;
+            btnOrders.Image = (Image)resources.GetObject("btnOrders.Image");
+            btnOrders.ImageHover = (Image)resources.GetObject("btnOrders.ImageHover");
+            btnOrders.ImageNormal = (Image)resources.GetObject("btnOrders.ImageNormal");
+            btnOrders.Location = new Point(743, 12);
+            btnOrders.Name = "btnOrders";
+            btnOrders.Size = new Size(69, 62);
+            btnOrders.SizeMode = PictureBoxSizeMode.Zoom;
+            btnOrders.TabIndex = 17;
+            btnOrders.TabStop = false;
             // 
-            // userControlButton4
+            // btnUsers
             // 
-            userControlButton4.Image = (Image)resources.GetObject("userControlButton4.Image");
-            userControlButton4.ImageHover = (Image)resources.GetObject("userControlButton4.ImageHover");
-            userControlButton4.ImageNormal = (Image)resources.GetObject("userControlButton4.ImageNormal");
-            userControlButton4.Location = new Point(645, 12);
-            userControlButton4.Name = "userControlButton4";
-            userControlButton4.Size = new Size(69, 62);
-            userControlButton4.SizeMode = PictureBoxSizeMode.Zoom;
-            userControlButton4.TabIndex = 15;
-            userControlButton4.TabStop = false;
+            btnUsers.Image = (Image)resources.GetObject("btnUsers.Image");
+            btnUsers.ImageHover = (Image)resources.GetObject("btnUsers.ImageHover");
+            btnUsers.ImageNormal = (Image)resources.GetObject("btnUsers.ImageNormal");
+            btnUsers.Location = new Point(645, 12);
+            btnUsers.Name = "btnUsers";
+            btnUsers.Size = new Size(69, 62);
+            btnUsers.SizeMode = PictureBoxSizeMode.Zoom;
+            btnUsers.TabIndex = 15;
+            btnUsers.TabStop = false;
+            btnUsers.Click += btnUsers_Click;
             // 
-            // userControlButton3
+            // btnCategory
             // 
-            userControlButton3.Image = (Image)resources.GetObject("userControlButton3.Image");
-            userControlButton3.ImageHover = (Image)resources.GetObject("userControlButton3.ImageHover");
-            userControlButton3.ImageNormal = (Image)resources.GetObject("userControlButton3.ImageNormal");
-            userControlButton3.Location = new Point(543, 12);
-            userControlButton3.Name = "userControlButton3";
-            userControlButton3.Size = new Size(69, 62);
-            userControlButton3.SizeMode = PictureBoxSizeMode.Zoom;
-            userControlButton3.TabIndex = 14;
-            userControlButton3.TabStop = false;
+            btnCategory.Image = (Image)resources.GetObject("btnCategory.Image");
+            btnCategory.ImageHover = (Image)resources.GetObject("btnCategory.ImageHover");
+            btnCategory.ImageNormal = (Image)resources.GetObject("btnCategory.ImageNormal");
+            btnCategory.Location = new Point(543, 12);
+            btnCategory.Name = "btnCategory";
+            btnCategory.Size = new Size(69, 62);
+            btnCategory.SizeMode = PictureBoxSizeMode.Zoom;
+            btnCategory.TabIndex = 14;
+            btnCategory.TabStop = false;
             // 
-            // userControlButton2
+            // btnCustomer
             // 
-            userControlButton2.Image = (Image)resources.GetObject("userControlButton2.Image");
-            userControlButton2.ImageHover = (Image)resources.GetObject("userControlButton2.ImageHover");
-            userControlButton2.ImageNormal = (Image)resources.GetObject("userControlButton2.ImageNormal");
-            userControlButton2.Location = new Point(442, 12);
-            userControlButton2.Name = "userControlButton2";
-            userControlButton2.Size = new Size(69, 62);
-            userControlButton2.SizeMode = PictureBoxSizeMode.Zoom;
-            userControlButton2.TabIndex = 13;
-            userControlButton2.TabStop = false;
+            btnCustomer.Image = (Image)resources.GetObject("btnCustomer.Image");
+            btnCustomer.ImageHover = (Image)resources.GetObject("btnCustomer.ImageHover");
+            btnCustomer.ImageNormal = (Image)resources.GetObject("btnCustomer.ImageNormal");
+            btnCustomer.Location = new Point(442, 12);
+            btnCustomer.Name = "btnCustomer";
+            btnCustomer.Size = new Size(69, 62);
+            btnCustomer.SizeMode = PictureBoxSizeMode.Zoom;
+            btnCustomer.TabIndex = 13;
+            btnCustomer.TabStop = false;
+            btnCustomer.Click += btnCustomer_Click;
             // 
-            // userControlButton1
+            // btnProduct
             // 
-            userControlButton1.Image = (Image)resources.GetObject("userControlButton1.Image");
-            userControlButton1.ImageHover = (Image)resources.GetObject("userControlButton1.ImageHover");
-            userControlButton1.ImageNormal = (Image)resources.GetObject("userControlButton1.ImageNormal");
-            userControlButton1.Location = new Point(345, 12);
-            userControlButton1.Name = "userControlButton1";
-            userControlButton1.Size = new Size(69, 62);
-            userControlButton1.SizeMode = PictureBoxSizeMode.Zoom;
-            userControlButton1.TabIndex = 0;
-            userControlButton1.TabStop = false;
+            btnProduct.Image = (Image)resources.GetObject("btnProduct.Image");
+            btnProduct.ImageHover = (Image)resources.GetObject("btnProduct.ImageHover");
+            btnProduct.ImageNormal = (Image)resources.GetObject("btnProduct.ImageNormal");
+            btnProduct.Location = new Point(345, 12);
+            btnProduct.Name = "btnProduct";
+            btnProduct.Size = new Size(69, 62);
+            btnProduct.SizeMode = PictureBoxSizeMode.Zoom;
+            btnProduct.TabIndex = 0;
+            btnProduct.TabStop = false;
+            btnProduct.Click += btnProduct_Click;
             // 
             // label5
             // 
@@ -276,11 +279,11 @@
             Text = "Form2";
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)userControlButton6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)userControlButton4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)userControlButton3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)userControlButton2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)userControlButton1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnOrders).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnUsers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnCategory).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnCustomer).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnProduct).EndInit();
             ResumeLayout(false);
         }
 
@@ -294,15 +297,15 @@
         private Label label2;
         private Label label5;
         private Label label4;
-        private UserControlButton userControlButton1;
+        private UserControlButton btnProduct;
         private Label label10;
         private Label label9;
         private Label label8;
         private Label label7;
         private Label label6;
-        private UserControlButton userControlButton6;
-        private UserControlButton userControlButton4;
-        private UserControlButton userControlButton3;
-        private UserControlButton userControlButton2;
+        private UserControlButton btnOrders;
+        private UserControlButton btnUsers;
+        private UserControlButton btnCategory;
+        private UserControlButton btnCustomer;
     }
 }

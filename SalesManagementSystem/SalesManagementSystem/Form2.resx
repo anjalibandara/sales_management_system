@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="userControlButton6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnOrders.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAAOFQTFRF////
         Hn/+9LQmAHn/AHTznbnwscLhFX3/DXn48fT5//75A3byWpPx4+Xlq8Dhl7jx3ePq3actUZL6baH8AHX/
@@ -165,7 +165,7 @@
         giAIgiAIgiAIUiD/A94FH8Eip2S4AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="userControlButton6.ImageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnOrders.ImageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAALpQTFRF////
         vfPsDV9aQqajec7LAFpVRKmmAFhTAFRPAFxXOJWSNXBsClxXJ357wffwhKakapKP2uXkVYaDEWNfLomE
@@ -227,7 +227,7 @@
         wDVW0K+LzQxRwdDBNm1uCXKW53Ypi0Bz8z8j7vE33oeOAgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="userControlButton6.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnOrders.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAAOFQTFRF////
         Hn/+9LQmAHn/AHTznbnwscLhFX3/DXn48fT5//75A3byWpPx4+Xlq8Dhl7jx3ePq3actUZL6baH8AHX/
@@ -274,7 +274,7 @@
         giAIgiAIgiAIUiD/A94FH8Eip2S4AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="userControlButton4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnUsers.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAAOFQTFRF////
         Hn/+9LQmAHn/AHTznbnwscLhFX3/DXn48fT5//75A3byWpPx4+Xlq8Dhl7jx3ePq3actUZL6baH8AHX/
@@ -321,7 +321,7 @@
         giAIgiAIgiAIUiD/A94FH8Eip2S4AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="userControlButton4.ImageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnUsers.ImageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAALpQTFRF////
         vfPsDV9aQqajec7LAFpVRKmmAFhTAFRPAFxXOJWSNXBsClxXJ357wffwhKakapKP2uXkVYaDEWNfLomE
@@ -383,7 +383,7 @@
         wDVW0K+LzQxRwdDBNm1uCXKW53Ypi0Bz8z8j7vE33oeOAgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="userControlButton4.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnUsers.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAAOFQTFRF////
         Hn/+9LQmAHn/AHTznbnwscLhFX3/DXn48fT5//75A3byWpPx4+Xlq8Dhl7jx3ePq3actUZL6baH8AHX/
@@ -430,7 +430,7 @@
         giAIgiAIgiAIUiD/A94FH8Eip2S4AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="userControlButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCategory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAAOFQTFRF////
         Hn/+9LQmAHn/AHTznbnwscLhFX3/DXn48fT5//75A3byWpPx4+Xlq8Dhl7jx3ePq3actUZL6baH8AHX/
@@ -477,7 +477,7 @@
         giAIgiAIgiAIUiD/A94FH8Eip2S4AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="userControlButton3.ImageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCategory.ImageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAALpQTFRF////
         vfPsDV9aQqajec7LAFpVRKmmAFhTAFRPAFxXOJWSNXBsClxXJ357wffwhKakapKP2uXkVYaDEWNfLomE
@@ -539,7 +539,7 @@
         wDVW0K+LzQxRwdDBNm1uCXKW53Ypi0Bz8z8j7vE33oeOAgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="userControlButton3.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCategory.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAAOFQTFRF////
         Hn/+9LQmAHn/AHTznbnwscLhFX3/DXn48fT5//75A3byWpPx4+Xlq8Dhl7jx3ePq3actUZL6baH8AHX/
@@ -586,7 +586,7 @@
         giAIgiAIgiAIUiD/A94FH8Eip2S4AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="userControlButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCustomer.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAAOFQTFRF////
         Hn/+9LQmAHn/AHTznbnwscLhFX3/DXn48fT5//75A3byWpPx4+Xlq8Dhl7jx3ePq3actUZL6baH8AHX/
@@ -633,7 +633,7 @@
         giAIgiAIgiAIUiD/A94FH8Eip2S4AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="userControlButton2.ImageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCustomer.ImageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAALpQTFRF////
         vfPsDV9aQqajec7LAFpVRKmmAFhTAFRPAFxXOJWSNXBsClxXJ357wffwhKakapKP2uXkVYaDEWNfLomE
@@ -695,7 +695,7 @@
         wDVW0K+LzQxRwdDBNm1uCXKW53Ypi0Bz8z8j7vE33oeOAgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="userControlButton2.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCustomer.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAAOFQTFRF////
         Hn/+9LQmAHn/AHTznbnwscLhFX3/DXn48fT5//75A3byWpPx4+Xlq8Dhl7jx3ePq3actUZL6baH8AHX/
@@ -742,7 +742,7 @@
         giAIgiAIgiAIUiD/A94FH8Eip2S4AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="userControlButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnProduct.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAAOFQTFRF////
         Hn/+9LQmAHn/AHTznbnwscLhFX3/DXn48fT5//75A3byWpPx4+Xlq8Dhl7jx3ePq3actUZL6baH8AHX/
@@ -789,7 +789,7 @@
         giAIgiAIgiAIUiD/A94FH8Eip2S4AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="userControlButton1.ImageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnProduct.ImageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAALpQTFRF////
         vfPsDV9aQqajec7LAFpVRKmmAFhTAFRPAFxXOJWSNXBsClxXJ357wffwhKakapKP2uXkVYaDEWNfLomE
@@ -851,7 +851,7 @@
         wDVW0K+LzQxRwdDBNm1uCXKW53Ypi0Bz8z8j7vE33oeOAgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="userControlButton1.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnProduct.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAAOFQTFRF////
         Hn/+9LQmAHn/AHTznbnwscLhFX3/DXn48fT5//75A3byWpPx4+Xlq8Dhl7jx3ePq3actUZL6baH8AHX/

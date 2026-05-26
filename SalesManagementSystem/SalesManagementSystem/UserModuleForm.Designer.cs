@@ -95,7 +95,6 @@
             label3.Size = new Size(89, 20);
             label3.TabIndex = 2;
             label3.Text = "User Name :";
-            //label3.Click += label3_Click;
             // 
             // textUserName
             // 
@@ -103,7 +102,6 @@
             textUserName.Name = "textUserName";
             textUserName.Size = new Size(513, 27);
             textUserName.TabIndex = 3;
-            //textUserName.TextChanged += textBox1_TextChanged;
             // 
             // label4
             // 
@@ -180,7 +178,7 @@
             // 
             btnClear.BackColor = Color.Red;
             btnClear.ForeColor = Color.White;
-            btnClear.Location = new Point(433, 324);
+            btnClear.Location = new Point(432, 324);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(94, 39);
             btnClear.TabIndex = 12;
@@ -222,16 +220,16 @@
         private Panel panel1;
         private Label label2;
         private Label label3;
-        private TextBox textUserName;
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textFullName;
-        private TextBox textPass;
-        private TextBox textPhone;
-        private Button btnSave;
-        private Button btnUpdate;
-        private Button btnClear;
         private PictureBox pictureBoxClose;
+        public Button btnSave;
+        public Button btnUpdate;
+        public Button btnClear;
+        public TextBox textUserName;
+        public TextBox textFullName;
+        public TextBox textPass;
+        public TextBox textPhone;
     }
 }
