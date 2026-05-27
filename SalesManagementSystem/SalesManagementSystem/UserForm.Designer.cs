@@ -172,12 +172,13 @@
             btnAdd.Image = (Image)resources.GetObject("btnAdd.Image");
             btnAdd.ImageHover = (Image)resources.GetObject("btnAdd.ImageHover");
             btnAdd.ImageNormal = (Image)resources.GetObject("btnAdd.ImageNormal");
-            btnAdd.Location = new Point(848, 47);
+            btnAdd.Location = new Point(974, 47);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(34, 39);
             btnAdd.SizeMode = PictureBoxSizeMode.Zoom;
             btnAdd.TabIndex = 4;
             btnAdd.TabStop = false;
+            btnAdd.Click += btnAdd_Click_1;
             // 
             // UserForm
             // 

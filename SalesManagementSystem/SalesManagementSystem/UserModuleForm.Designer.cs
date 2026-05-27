@@ -38,11 +38,13 @@
             label5 = new Label();
             label6 = new Label();
             textFullName = new TextBox();
-            textPass = new TextBox();
+            textRePass = new TextBox();
             textPhone = new TextBox();
             btnSave = new Button();
             btnUpdate = new Button();
             btnClear = new Button();
+            textBox1 = new TextBox();
+            label7 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxClose).BeginInit();
             SuspendLayout();
@@ -63,18 +65,19 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(667, 88);
+            panel1.Size = new Size(697, 88);
             panel1.TabIndex = 1;
             // 
             // pictureBoxClose
             // 
             pictureBoxClose.Image = Properties.Resources.cancel;
-            pictureBoxClose.Location = new Point(641, 3);
+            pictureBoxClose.Location = new Point(671, 3);
             pictureBoxClose.Name = "pictureBoxClose";
             pictureBoxClose.Size = new Size(23, 31);
             pictureBoxClose.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxClose.TabIndex = 11;
             pictureBoxClose.TabStop = false;
+            pictureBoxClose.Click += pictureBoxClose_Click;
             // 
             // label2
             // 
@@ -90,7 +93,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(27, 109);
+            label3.Location = new Point(56, 113);
             label3.Name = "label3";
             label3.Size = new Size(89, 20);
             label3.TabIndex = 2;
@@ -98,7 +101,7 @@
             // 
             // textUserName
             // 
-            textUserName.Location = new Point(132, 106);
+            textUserName.Location = new Point(163, 106);
             textUserName.Name = "textUserName";
             textUserName.Size = new Size(513, 27);
             textUserName.TabIndex = 3;
@@ -106,7 +109,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(27, 278);
+            label4.Location = new Point(88, 307);
             label4.Name = "label4";
             label4.Size = new Size(57, 20);
             label4.TabIndex = 4;
@@ -115,16 +118,16 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(27, 217);
+            label5.Location = new Point(12, 262);
             label5.Name = "label5";
-            label5.Size = new Size(77, 20);
+            label5.Size = new Size(133, 20);
             label5.TabIndex = 5;
-            label5.Text = "Password :";
+            label5.Text = "Re-type Password :";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(27, 162);
+            label6.Location = new Point(62, 162);
             label6.Name = "label6";
             label6.Size = new Size(83, 20);
             label6.TabIndex = 6;
@@ -132,21 +135,22 @@
             // 
             // textFullName
             // 
-            textFullName.Location = new Point(132, 155);
+            textFullName.Location = new Point(163, 155);
             textFullName.Name = "textFullName";
             textFullName.Size = new Size(513, 27);
             textFullName.TabIndex = 7;
+            textFullName.TextChanged += textFullName_TextChanged;
             // 
-            // textPass
+            // textRePass
             // 
-            textPass.Location = new Point(132, 207);
-            textPass.Name = "textPass";
-            textPass.Size = new Size(513, 27);
-            textPass.TabIndex = 8;
+            textRePass.Location = new Point(163, 255);
+            textRePass.Name = "textRePass";
+            textRePass.Size = new Size(513, 27);
+            textRePass.TabIndex = 8;
             // 
             // textPhone
             // 
-            textPhone.Location = new Point(132, 271);
+            textPhone.Location = new Point(163, 304);
             textPhone.Name = "textPhone";
             textPhone.Size = new Size(513, 27);
             textPhone.TabIndex = 9;
@@ -155,7 +159,7 @@
             // 
             btnSave.BackColor = Color.Teal;
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(233, 324);
+            btnSave.Location = new Point(246, 352);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(94, 39);
             btnSave.TabIndex = 10;
@@ -167,34 +171,55 @@
             // 
             btnUpdate.BackColor = Color.FromArgb(192, 192, 0);
             btnUpdate.ForeColor = Color.White;
-            btnUpdate.Location = new Point(333, 324);
+            btnUpdate.Location = new Point(346, 352);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(94, 39);
             btnUpdate.TabIndex = 11;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnClear
             // 
             btnClear.BackColor = Color.Red;
             btnClear.ForeColor = Color.White;
-            btnClear.Location = new Point(432, 324);
+            btnClear.Location = new Point(445, 352);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(94, 39);
             btnClear.TabIndex = 12;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click_1;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(163, 206);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(513, 27);
+            textBox1.TabIndex = 14;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(68, 213);
+            label7.Name = "label7";
+            label7.Size = new Size(77, 20);
+            label7.TabIndex = 13;
+            label7.Text = "Password :";
+            label7.Click += label7_Click;
             // 
             // UserModuleForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(667, 375);
+            ClientSize = new Size(697, 412);
+            Controls.Add(textBox1);
+            Controls.Add(label7);
             Controls.Add(btnClear);
             Controls.Add(btnUpdate);
             Controls.Add(btnSave);
             Controls.Add(textPhone);
-            Controls.Add(textPass);
+            Controls.Add(textRePass);
             Controls.Add(textFullName);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -207,6 +232,7 @@
             Name = "UserModuleForm";
             StartPosition = FormStartPosition.Manual;
             Text = "UserModuleForm";
+            Load += UserModuleForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxClose).EndInit();
@@ -229,7 +255,9 @@
         public Button btnClear;
         public TextBox textUserName;
         public TextBox textFullName;
-        public TextBox textPass;
+        public TextBox textRePass;
         public TextBox textPhone;
+        public TextBox textBox1;
+        private Label label7;
     }
 }

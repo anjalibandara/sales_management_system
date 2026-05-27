@@ -53,11 +53,12 @@ namespace SalesManagementSystem
 
                 userModule.textUserName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 userModule.textFullName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                userModule.textPass.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                userModule.textRePass.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 userModule.textPhone.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
 
                 userModule.btnSave.Enabled = false;
                 userModule.btnUpdate.Enabled = true;
+                userModule.textUserName.Enabled = false;
                 userModule.ShowDialog();
 
             }
@@ -65,14 +66,15 @@ namespace SalesManagementSystem
                 if (MessageBox.Show("Are you sure you want to delete this user?", "Delete User", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     con.Open();
-                    cmd = new SqlCommand("DELETE FROM tbUser WHERE id=@id", con);
+                    cmd = new SqlCommand("DELETE FROM tbUser WHERE username LIKE'" + dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", con);
                     cmd.Parameters.AddWithValue("@id", dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    MessageBox.Show("Record has been successfully deleted.", "Delete User", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Record has been successfully deleted.!");
                     LoadUser();
                 }
-            { }
+            {
+            }
         }
 
 
@@ -82,6 +84,7 @@ namespace SalesManagementSystem
             userModule.btnSave.Enabled = true;
             userModule.btnUpdate.Enabled = false;
             userModule.ShowDialog();
+            LoadUser();
         }
 
         private void UserForm_Load(object sender, EventArgs e)
@@ -102,6 +105,15 @@ namespace SalesManagementSystem
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+            UserModuleForm userModule = new UserModuleForm();
+            userModule.btnSave.Enabled = true;
+            userModule.btnUpdate.Enabled = false;
+            userModule.ShowDialog();
+            LoadUser();
         }
     }
 }

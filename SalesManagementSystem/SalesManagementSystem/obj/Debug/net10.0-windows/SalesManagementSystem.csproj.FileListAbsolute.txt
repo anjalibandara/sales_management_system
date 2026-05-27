@@ -77,3 +77,5 @@ C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesM
 C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesManagementSystem\bin\Debug\net10.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesManagementSystem\bin\Debug\net10.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesManagementSystem\obj\Debug\net10.0-windows\SalesMan.8E186F91.Up2Date
+C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesManagementSystem\obj\Debug\net10.0-windows\SalesManagementSystem.CustomerForm.resources
+C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesManagementSystem\obj\Debug\net10.0-windows\SalesManagementSystem.CustomerModuleForm.resources

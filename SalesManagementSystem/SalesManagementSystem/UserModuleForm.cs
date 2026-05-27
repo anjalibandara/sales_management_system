@@ -12,6 +12,7 @@ namespace SalesManagementSystem
             AttachDbFilename=C:\Users\harsh\Documents\dbMS.mdf;
             Integrated Security=True;
             Connect Timeout=30");
+        SqlCommand cm = new SqlCommand();
 
         public UserModuleForm()
         {
@@ -29,10 +30,18 @@ namespace SalesManagementSystem
         {
             try
             {
+                if (textRePass.Text != textRePass.Text)
+                {
+                    MessageBox.Show("Password does not match.",
+                        "Warning",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    return;
+                }
                 // Validation
                 if (textUserName.Text == "" ||
                     textFullName.Text == "" ||
-                    textPass.Text == "" ||
+                    textRePass.Text == "" ||
                     textPhone.Text == "")
                 {
                     MessageBox.Show("Please fill all fields.",
@@ -58,7 +67,7 @@ namespace SalesManagementSystem
 
                     cm.Parameters.AddWithValue("@username", textUserName.Text);
                     cm.Parameters.AddWithValue("@fullname", textFullName.Text);
-                    cm.Parameters.AddWithValue("@password", textPass.Text);
+                    cm.Parameters.AddWithValue("@password", textRePass.Text);
                     cm.Parameters.AddWithValue("@phone", textPhone.Text);
 
                     cm.ExecuteNonQuery();
@@ -70,7 +79,7 @@ namespace SalesManagementSystem
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
 
-                    Clear();
+                    this.Dispose();
                 }
             }
             catch (Exception ex)
@@ -95,10 +104,62 @@ namespace SalesManagementSystem
         {
             textUserName.Clear();
             textFullName.Clear();
-            textPass.Clear();
+            textRePass.Clear();
+            textRePass.Clear();
             textPhone.Clear();
 
             textUserName.Focus();
+        }
+
+        private void textFullName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textRePass.Text != textRePass.Text)
+                {
+                    MessageBox.Show("Password does not match.",
+                        "Warning",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+
+                MessageBox.Show(ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void UserModuleForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click_1(object sender, EventArgs e)
+        {
+            Clear();
+            btnSave.Enabled = true;
+            btnUpdate.Enabled = false;
+        }
+
+        private void pictureBoxClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
