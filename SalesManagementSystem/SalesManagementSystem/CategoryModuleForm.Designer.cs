@@ -1,6 +1,6 @@
 ﻿namespace SalesManagementSystem
 {
-    partial class CustomerModuleForm
+    partial class CategoryModuleForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,14 +32,13 @@
             btnUpdate = new Button();
             pictureBoxClose = new PictureBox();
             label2 = new Label();
+            lblCatId = new Label();
             btnSave = new Button();
-            textCPhone = new TextBox();
-            label4 = new Label();
-            textCName = new TextBox();
+            textCatName = new TextBox();
             label3 = new Label();
             panel1 = new Panel();
             label1 = new Label();
-            lblCId = new Label();
+            textCatId = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxClose).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -48,10 +47,10 @@
             // 
             btnClear.BackColor = Color.Red;
             btnClear.ForeColor = Color.White;
-            btnClear.Location = new Point(510, 254);
+            btnClear.Location = new Point(500, 224);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(94, 39);
-            btnClear.TabIndex = 27;
+            btnClear.TabIndex = 37;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = false;
             btnClear.Click += btnClear_Click;
@@ -60,10 +59,10 @@
             // 
             btnUpdate.BackColor = Color.FromArgb(192, 192, 0);
             btnUpdate.ForeColor = Color.White;
-            btnUpdate.Location = new Point(382, 254);
+            btnUpdate.Location = new Point(372, 224);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(94, 39);
-            btnUpdate.TabIndex = 26;
+            btnUpdate.TabIndex = 36;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = false;
             btnUpdate.Click += btnUpdate_Click;
@@ -86,54 +85,46 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(12, 9);
             label2.Name = "label2";
-            label2.Size = new Size(164, 21);
+            label2.Size = new Size(163, 21);
             label2.TabIndex = 2;
-            label2.Text = "Customer Module ";
+            label2.Text = "Category Module ";
+            // 
+            // lblCatId
+            // 
+            lblCatId.AutoSize = true;
+            lblCatId.Location = new Point(27, 183);
+            lblCatId.Name = "lblCatId";
+            lblCatId.Size = new Size(106, 20);
+            lblCatId.TabIndex = 38;
+            lblCatId.Text = "Category Id :";
             // 
             // btnSave
             // 
             btnSave.BackColor = Color.Teal;
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(238, 254);
+            btnSave.Location = new Point(236, 224);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(94, 39);
-            btnSave.TabIndex = 25;
+            btnSave.TabIndex = 35;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
-            // textCPhone
+            // textCatName
             // 
-            textCPhone.Location = new Point(130, 189);
-            textCPhone.Name = "textCPhone";
-            textCPhone.Size = new Size(513, 26);
-            textCPhone.TabIndex = 24;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(55, 192);
-            label4.Name = "label4";
-            label4.Size = new Size(64, 20);
-            label4.TabIndex = 19;
-            label4.Text = "Phone :";
-            // 
-            // textCName
-            // 
-            textCName.Location = new Point(131, 129);
-            textCName.Name = "textCName";
-            textCName.Size = new Size(513, 26);
-            textCName.TabIndex = 18;
+            textCatName.Location = new Point(153, 131);
+            textCatName.Name = "textCatName";
+            textCatName.Size = new Size(513, 26);
+            textCatName.TabIndex = 32;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(55, 135);
+            label3.Location = new Point(12, 134);
             label3.Name = "label3";
-            label3.Size = new Size(61, 20);
-            label3.TabIndex = 17;
-            label3.Text = "Name :";
-            label3.Click += label3_Click;
+            label3.Size = new Size(135, 20);
+            label3.TabIndex = 31;
+            label3.Text = "Category Name :";
             // 
             // panel1
             // 
@@ -144,47 +135,43 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(697, 88);
-            panel1.TabIndex = 16;
+            panel1.TabIndex = 30;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(440, 78);
+            label1.Location = new Point(440, 105);
             label1.Name = "label1";
             label1.Size = new Size(0, 20);
-            label1.TabIndex = 15;
+            label1.TabIndex = 29;
             // 
-            // lblCId
+            // textCatId
             // 
-            lblCId.AutoSize = true;
-            lblCId.Location = new Point(23, 263);
-            lblCId.Name = "lblCId";
-            lblCId.Size = new Size(96, 20);
-            lblCId.TabIndex = 28;
-            lblCId.Text = "customer Id";
-            lblCId.Click += lblCId_Click;
+            textCatId.Location = new Point(153, 180);
+            textCatId.Name = "textCatId";
+            textCatId.Size = new Size(513, 26);
+            textCatId.TabIndex = 39;
             // 
-            // CustomerModuleForm
+            // CategoryModuleForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(697, 346);
-            Controls.Add(lblCId);
+            ClientSize = new Size(697, 289);
+            Controls.Add(textCatId);
             Controls.Add(btnClear);
             Controls.Add(btnUpdate);
+            Controls.Add(lblCatId);
             Controls.Add(btnSave);
-            Controls.Add(textCPhone);
-            Controls.Add(label4);
-            Controls.Add(textCName);
+            Controls.Add(textCatName);
             Controls.Add(label3);
             Controls.Add(panel1);
             Controls.Add(label1);
             Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "CustomerModuleForm";
+            Name = "CategoryModuleForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "CustomerModuleForm";
-            Load += CustomerModuleForm_Load;
+            Text = "v";
+            Load += CategoryModuleForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxClose).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -193,18 +180,19 @@
         }
 
         #endregion
+
         public Button btnClear;
         public Button btnUpdate;
         private PictureBox pictureBoxClose;
         private Label label2;
+        private Label lblCId;
         public Button btnSave;
-        public TextBox textCPhone;
-        private Label label4;
         public TextBox textCName;
         private Label label3;
         private Panel panel1;
         private Label label1;
-        private Label lblCId;
-        public TextBox textCId;
+        private Label lblCatId;
+        public TextBox textCatName;
+        public TextBox textCatId;
     }
 }

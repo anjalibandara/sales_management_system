@@ -128,10 +128,30 @@ namespace SalesManagementSystem
                         MessageBoxIcon.Warning);
                     return;
                 }
+                if(MessageBox.Show(
+                    "Are you sure you want to update this user?",
+                    "Update User",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    con.Open();
+                    SqlCommand cm = new SqlCommand(
+                        "UPDATE tbUser SET fullname = @fullname, password = @password, phone = @phone " +
+                        "WHERE username LIKE '" + textUserName.Text + "'", con);
+                    cm.Parameters.AddWithValue("@fullname", textFullName.Text);
+                    cm.Parameters.AddWithValue("@password", textRePass.Text);
+                    cm.Parameters.AddWithValue("@phone", textPhone.Text);
+                    cm.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("User has been successfully updated!",
+                        "Success",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    this.Dispose();
+                }
             }
             catch (Exception ex)
             {
-                con.Close();
 
                 MessageBox.Show(ex.Message,
                     "Error",

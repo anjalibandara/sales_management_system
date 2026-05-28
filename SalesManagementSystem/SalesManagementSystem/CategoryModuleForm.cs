@@ -1,53 +1,59 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using Microsoft.Data.SqlClient;
 
 namespace SalesManagementSystem
 {
-    public partial class CustomerModuleForm : Form
+    public partial class CategoryModuleForm : Form
     {
         SqlConnection con = new SqlConnection(
-            @"Data Source=(LocalDB)\MSSQLLocalDB;
+           @"Data Source=(LocalDB)\MSSQLLocalDB;
             AttachDbFilename=C:\Users\harsh\Documents\dbMS.mdf;
             Integrated Security=True;
             Connect Timeout=30");
         SqlCommand cm = new SqlCommand();
-        public CustomerModuleForm()
+
+        public CategoryModuleForm()
         {
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void CategoryModuleForm_Load(object sender, EventArgs e)
         {
 
+        }
+        public void Clear()
+        {
+            textCatName.Clear();
+            //textCPhone.Clear();
+            btnSave.Enabled = true;
+            btnUpdate.Enabled = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Button clicked");
             try
             {
-
                 // Confirmation
                 if (MessageBox.Show(
-                    "Are you sure you want to save this customer?",
-                    "Save Customer",
+                    "Are you sure you want to save this category?",
+                    "Save Category",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     con.Open();
 
                     SqlCommand cm = new SqlCommand(
-                        "INSERT INTO tbCustomer(cname, cphone) " +
-                        "VALUES(@cname, @cphone)", con);
+                        "INSERT INTO tbCategory(catname) " +
+                        "VALUES(@catname)", con);
 
-                    cm.Parameters.AddWithValue("@cname", textCName.Text);
-                    cm.Parameters.AddWithValue("@cphone", textCPhone.Text);
+                    cm.Parameters.AddWithValue("@catname", textCatName.Text);
+
                     //con.Open();
 
 
@@ -55,7 +61,7 @@ namespace SalesManagementSystem
 
                     con.Close();
 
-                    MessageBox.Show("User has been successfully saved!",
+                    MessageBox.Show("Category has been successfully saved!",
                         "Success",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
@@ -73,23 +79,19 @@ namespace SalesManagementSystem
                     MessageBoxIcon.Error);
             }
         }
-        public void Clear()
-        {
-            textCName.Clear();
-            textCPhone.Clear();
-            btnSave.Enabled = true;
-            btnUpdate.Enabled = false;
-        }
+
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clear();
             btnSave.Enabled = true;
             btnUpdate.Enabled = false;
+
         }
 
         private void pictureBoxClose_Click(object sender, EventArgs e)
         {
             this.Dispose();
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -97,8 +99,8 @@ namespace SalesManagementSystem
             try
             {
                 if (MessageBox.Show(
-                    "Are you sure you want to update this customer?",
-                    "Update Customer",
+                    "Are you sure you want to update this category?",
+                    "Update Category",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -108,12 +110,11 @@ namespace SalesManagementSystem
                     con.Open();
 
                     SqlCommand cm = new SqlCommand(
-                        "UPDATE tbCustomer SET cname=@cname, cphone=@cphone WHERE cid=@cid",
+                        "UPDATE tbCategory SET catname=@catname WHERE catid=@catid",
                         con);
 
-                    cm.Parameters.AddWithValue("@cid", textCId.Text);
-                    cm.Parameters.AddWithValue("@cname", textCName.Text);
-                    cm.Parameters.AddWithValue("@cphone", textCPhone.Text);
+                    cm.Parameters.AddWithValue("@catid", textCatId.Text);
+                    cm.Parameters.AddWithValue("@catname", textCatName.Text);
 
                     int rows = cm.ExecuteNonQuery();
 
@@ -122,7 +123,7 @@ namespace SalesManagementSystem
                     if (rows > 0)
                     {
                         MessageBox.Show(
-                            "Customer updated successfully!",
+                            "Category updated successfully!",
                             "Success",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
@@ -143,17 +144,6 @@ namespace SalesManagementSystem
 
                 MessageBox.Show("Error: " + ex.Message);
             }
-
-        }
-
-        private void lblCId_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CustomerModuleForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace SalesManagementSystem
 {
-    partial class CustomerForm
+    partial class OrderForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,41 +29,44 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             panel1 = new Panel();
-            customerDataGridView1 = new DataGridView();
+            dataGridView1 = new DataGridView();
             Column5 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
             Edit = new DataGridViewImageColumn();
             Delete = new DataGridViewImageColumn();
-            dgvCustomer = new Panel();
+            panel2 = new Panel();
             label1 = new Label();
             btnAdd = new UserControlButton();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)customerDataGridView1).BeginInit();
-            dgvCustomer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnAdd).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(customerDataGridView1);
+            panel1.Controls.Add(dataGridView1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1020, 256);
+            panel1.Size = new Size(1064, 256);
             panel1.TabIndex = 4;
-            panel1.Paint += panel1_Paint_1;
             // 
-            // customerDataGridView1
+            // dataGridView1
             // 
-            customerDataGridView1.AllowUserToAddRows = false;
-            customerDataGridView1.BackgroundColor = Color.White;
-            customerDataGridView1.BorderStyle = BorderStyle.None;
-            customerDataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 70, 160);
             dataGridViewCellStyle1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -71,47 +74,77 @@
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            customerDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            customerDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            customerDataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column5, Column1, Column2, Column4, Edit, Delete });
-            customerDataGridView1.EnableHeadersVisualStyles = false;
-            customerDataGridView1.GridColor = SystemColors.HotTrack;
-            customerDataGridView1.Location = new Point(0, 0);
-            customerDataGridView1.Name = "customerDataGridView1";
-            customerDataGridView1.RowHeadersWidth = 51;
-            customerDataGridView1.Size = new Size(1020, 450);
-            customerDataGridView1.TabIndex = 0;
-            customerDataGridView1.CellContentClick += customerDataGridView1_CellContentClick;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column5, Column1, Column7, Column2, Column3, Column4, Column6, Column8, Edit, Delete });
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.GridColor = SystemColors.HotTrack;
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(1064, 474);
+            dataGridView1.TabIndex = 0;
             // 
             // Column5
             // 
+            Column5.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Column5.HeaderText = "No";
             Column5.MinimumWidth = 6;
             Column5.Name = "Column5";
-            Column5.Width = 125;
+            Column5.Width = 59;
             // 
             // Column1
             // 
             Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Column1.HeaderText = "Customer Id";
+            Column1.HeaderText = "Order Id";
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
-            Column1.Width = 127;
+            // 
+            // Column7
+            // 
+            Column7.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Column7.HeaderText = "Order Date";
+            Column7.MinimumWidth = 6;
+            Column7.Name = "Column7";
+            Column7.Width = 121;
             // 
             // Column2
             // 
-            Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column2.HeaderText = "Name";
+            Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Column2.HeaderText = "Product Id";
             Column2.MinimumWidth = 6;
             Column2.Name = "Column2";
+            Column2.Width = 115;
+            // 
+            // Column3
+            // 
+            Column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Column3.HeaderText = "Customer Id";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Width = 127;
             // 
             // Column4
             // 
             Column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Column4.HeaderText = "Phone";
+            Column4.HeaderText = "Qty";
             Column4.MinimumWidth = 6;
             Column4.Name = "Column4";
-            Column4.Width = 85;
+            Column4.Width = 64;
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Price";
+            Column6.MinimumWidth = 6;
+            Column6.Name = "Column6";
+            Column6.Width = 125;
+            // 
+            // Column8
+            // 
+            Column8.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column8.HeaderText = "Total Amount";
+            Column8.MinimumWidth = 6;
+            Column8.Name = "Column8";
             // 
             // Edit
             // 
@@ -133,18 +166,17 @@
             Delete.Name = "Delete";
             Delete.Width = 6;
             // 
-            // dgvCustomer
+            // panel2
             // 
-            dgvCustomer.BackColor = Color.DodgerBlue;
-            dgvCustomer.Controls.Add(label1);
-            dgvCustomer.Controls.Add(btnAdd);
-            dgvCustomer.Dock = DockStyle.Bottom;
-            dgvCustomer.ForeColor = Color.Coral;
-            dgvCustomer.Location = new Point(0, 323);
-            dgvCustomer.Name = "dgvCustomer";
-            dgvCustomer.Size = new Size(1020, 127);
-            dgvCustomer.TabIndex = 5;
-            dgvCustomer.Paint += dgvCustomer_Paint;
+            panel2.BackColor = Color.DodgerBlue;
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(btnAdd);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.ForeColor = Color.Coral;
+            panel2.Location = new Point(0, 347);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1064, 127);
+            panel2.TabIndex = 5;
             // 
             // label1
             // 
@@ -154,10 +186,9 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(46, 63);
             label1.Name = "label1";
-            label1.Size = new Size(201, 23);
+            label1.Size = new Size(148, 23);
             label1.TabIndex = 3;
-            label1.Text = "Manage Customers";
-            label1.Click += label1_Click;
+            label1.Text = "Manage Users";
             // 
             // btnAdd
             // 
@@ -172,21 +203,21 @@
             btnAdd.TabStop = false;
             btnAdd.Click += btnAdd_Click;
             // 
-            // CustomerForm
+            // OrderForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1020, 450);
+            ClientSize = new Size(1064, 474);
             Controls.Add(panel1);
-            Controls.Add(dgvCustomer);
+            Controls.Add(panel2);
+            Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "CustomerForm";
-            Text = "CustomerForm";
-            Load += CustomerForm_Load;
+            Name = "OrderForm";
+            Text = "OrderForm";
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)customerDataGridView1).EndInit();
-            dgvCustomer.ResumeLayout(false);
-            dgvCustomer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnAdd).EndInit();
             ResumeLayout(false);
         }
@@ -194,14 +225,18 @@
         #endregion
 
         private Panel panel1;
-        private DataGridView customerDataGridView1;
-        private Panel dgvCustomer;
+        private DataGridView dataGridView1;
+        private Panel panel2;
         private Label label1;
         private UserControlButton btnAdd;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column8;
         private DataGridViewImageColumn Edit;
         private DataGridViewImageColumn Delete;
     }

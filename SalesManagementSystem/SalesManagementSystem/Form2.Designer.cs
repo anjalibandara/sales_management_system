@@ -141,6 +141,7 @@
             btnOrders.SizeMode = PictureBoxSizeMode.Zoom;
             btnOrders.TabIndex = 17;
             btnOrders.TabStop = false;
+            btnOrders.Click += btnOrders_Click;
             // 
             // btnUsers
             // 
@@ -166,6 +167,7 @@
             btnCategory.SizeMode = PictureBoxSizeMode.Zoom;
             btnCategory.TabIndex = 14;
             btnCategory.TabStop = false;
+            btnCategory.Click += btnCategory_Click;
             // 
             // btnCustomer
             // 
@@ -278,6 +280,7 @@
             Controls.Add(flowLayoutPanel1);
             Name = "mainForm";
             Text = "Form2";
+            Load += mainForm_Load;
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnOrders).EndInit();

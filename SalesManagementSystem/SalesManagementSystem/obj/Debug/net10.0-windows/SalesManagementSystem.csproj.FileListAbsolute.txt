@@ -79,3 +79,9 @@ C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesM
 C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesManagementSystem\obj\Debug\net10.0-windows\SalesMan.8E186F91.Up2Date
 C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesManagementSystem\obj\Debug\net10.0-windows\SalesManagementSystem.CustomerForm.resources
 C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesManagementSystem\obj\Debug\net10.0-windows\SalesManagementSystem.CustomerModuleForm.resources
+C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesManagementSystem\obj\Debug\net10.0-windows\SalesManagementSystem.categoryForm.resources
+C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesManagementSystem\obj\Debug\net10.0-windows\SalesManagementSystem.CategoryModuleForm.resources
+C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesManagementSystem\obj\Debug\net10.0-windows\SalesManagementSystem.ProductForm.resources
+C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesManagementSystem\obj\Debug\net10.0-windows\SalesManagementSystem.ProductModuleForm.resources
+C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesManagementSystem\obj\Debug\net10.0-windows\SalesManagementSystem.OrderForm.resources
+C:\Users\harsh\source\repos\sales_management_system\SalesManagementSystem\SalesManagementSystem\obj\Debug\net10.0-windows\SalesManagementSystem.OrderModuleForm.resources

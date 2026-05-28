@@ -68,12 +68,27 @@ namespace SalesManagementSystem
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new ProductForm());
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             openChildForm(new CustomerForm());
+        }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            openChildForm(new categoryForm());
+        }
+
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOrders_Click(object sender, EventArgs e)
+        {
+            openChildForm(new OrderForm());
         }
     }
 }

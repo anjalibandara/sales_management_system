@@ -1,6 +1,6 @@
 ﻿namespace SalesManagementSystem
 {
-    partial class CustomerForm
+    partial class categoryForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,60 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
-            panel1 = new Panel();
-            customerDataGridView1 = new DataGridView();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(categoryForm));
+            categoryDataGridView1 = new DataGridView();
             Column5 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
             Edit = new DataGridViewImageColumn();
             Delete = new DataGridViewImageColumn();
-            dgvCustomer = new Panel();
+            panel1 = new Panel();
+            dgvCategory = new Panel();
             label1 = new Label();
             btnAdd = new UserControlButton();
+            ((System.ComponentModel.ISupportInitialize)categoryDataGridView1).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)customerDataGridView1).BeginInit();
-            dgvCustomer.SuspendLayout();
+            dgvCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnAdd).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // categoryDataGridView1
             // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(customerDataGridView1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1020, 256);
-            panel1.TabIndex = 4;
-            panel1.Paint += panel1_Paint_1;
-            // 
-            // customerDataGridView1
-            // 
-            customerDataGridView1.AllowUserToAddRows = false;
-            customerDataGridView1.BackgroundColor = Color.White;
-            customerDataGridView1.BorderStyle = BorderStyle.None;
-            customerDataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 70, 160);
-            dataGridViewCellStyle1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            customerDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            customerDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            customerDataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column5, Column1, Column2, Column4, Edit, Delete });
-            customerDataGridView1.EnableHeadersVisualStyles = false;
-            customerDataGridView1.GridColor = SystemColors.HotTrack;
-            customerDataGridView1.Location = new Point(0, 0);
-            customerDataGridView1.Name = "customerDataGridView1";
-            customerDataGridView1.RowHeadersWidth = 51;
-            customerDataGridView1.Size = new Size(1020, 450);
-            customerDataGridView1.TabIndex = 0;
-            customerDataGridView1.CellContentClick += customerDataGridView1_CellContentClick;
+            categoryDataGridView1.AllowUserToAddRows = false;
+            categoryDataGridView1.BackgroundColor = Color.White;
+            categoryDataGridView1.BorderStyle = BorderStyle.None;
+            categoryDataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 70, 160);
+            dataGridViewCellStyle3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            categoryDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            categoryDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            categoryDataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column5, Column1, Column2, Edit, Delete });
+            categoryDataGridView1.EnableHeadersVisualStyles = false;
+            categoryDataGridView1.GridColor = SystemColors.HotTrack;
+            categoryDataGridView1.Location = new Point(0, 0);
+            categoryDataGridView1.Name = "categoryDataGridView1";
+            categoryDataGridView1.RowHeadersWidth = 51;
+            categoryDataGridView1.Size = new Size(1020, 450);
+            categoryDataGridView1.TabIndex = 0;
+            categoryDataGridView1.CellContentClick += categoryDataGridView1_CellContentClick;
             // 
             // Column5
             // 
@@ -93,7 +81,7 @@
             // Column1
             // 
             Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Column1.HeaderText = "Customer Id";
+            Column1.HeaderText = "Category Id";
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
             Column1.Width = 127;
@@ -104,14 +92,6 @@
             Column2.HeaderText = "Name";
             Column2.MinimumWidth = 6;
             Column2.Name = "Column2";
-            // 
-            // Column4
-            // 
-            Column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Column4.HeaderText = "Phone";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 85;
             // 
             // Edit
             // 
@@ -133,18 +113,29 @@
             Delete.Name = "Delete";
             Delete.Width = 6;
             // 
-            // dgvCustomer
+            // panel1
             // 
-            dgvCustomer.BackColor = Color.DodgerBlue;
-            dgvCustomer.Controls.Add(label1);
-            dgvCustomer.Controls.Add(btnAdd);
-            dgvCustomer.Dock = DockStyle.Bottom;
-            dgvCustomer.ForeColor = Color.Coral;
-            dgvCustomer.Location = new Point(0, 323);
-            dgvCustomer.Name = "dgvCustomer";
-            dgvCustomer.Size = new Size(1020, 127);
-            dgvCustomer.TabIndex = 5;
-            dgvCustomer.Paint += dgvCustomer_Paint;
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(categoryDataGridView1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1020, 256);
+            panel1.TabIndex = 6;
+            //panel1.Paint += this.panel1_Paint;
+            // 
+            // dgvCategory
+            // 
+            dgvCategory.BackColor = Color.DodgerBlue;
+            dgvCategory.Controls.Add(label1);
+            dgvCategory.Controls.Add(btnAdd);
+            dgvCategory.Dock = DockStyle.Bottom;
+            dgvCategory.ForeColor = Color.Coral;
+            dgvCategory.Location = new Point(0, 323);
+            dgvCategory.Name = "dgvCategory";
+            dgvCategory.Size = new Size(1020, 127);
+            dgvCategory.TabIndex = 7;
+            //dgvCategory.Paint += this.dgvCategory_Paint;
             // 
             // label1
             // 
@@ -154,9 +145,9 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(46, 63);
             label1.Name = "label1";
-            label1.Size = new Size(201, 23);
+            label1.Size = new Size(205, 23);
             label1.TabIndex = 3;
-            label1.Text = "Manage Customers";
+            label1.Text = "Manage Categories";
             label1.Click += label1_Click;
             // 
             // btnAdd
@@ -172,36 +163,37 @@
             btnAdd.TabStop = false;
             btnAdd.Click += btnAdd_Click;
             // 
-            // CustomerForm
+            // categoryForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1020, 450);
             Controls.Add(panel1);
-            Controls.Add(dgvCustomer);
+            Controls.Add(dgvCategory);
+            Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "CustomerForm";
-            Text = "CustomerForm";
-            Load += CustomerForm_Load;
+            Name = "categoryForm";
+            Text = "categoryForm";
+            Load += categoryForm_Load;
+            ((System.ComponentModel.ISupportInitialize)categoryDataGridView1).EndInit();
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)customerDataGridView1).EndInit();
-            dgvCustomer.ResumeLayout(false);
-            dgvCustomer.PerformLayout();
+            dgvCategory.ResumeLayout(false);
+            dgvCategory.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnAdd).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
-        private DataGridView customerDataGridView1;
-        private Panel dgvCustomer;
         private Label label1;
         private UserControlButton btnAdd;
+        private Panel dgvCustomer;
+        private Panel panel1;
+        private DataGridView categoryDataGridView1;
+        private Panel dgvCategory;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column4;
         private DataGridViewImageColumn Edit;
         private DataGridViewImageColumn Delete;
     }
