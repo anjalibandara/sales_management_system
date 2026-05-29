@@ -1,4 +1,5 @@
 using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace SalesManagementSystem
 {
@@ -63,6 +64,37 @@ namespace SalesManagementSystem
         {
 
         }
+        private void ShowAllUsers()
+        {
+            try
+            {
+                SqlCommand cmdUsers = new SqlCommand(
+                    "SELECT username, password FROM tbUser",
+                    con);
+
+                if (con.State == ConnectionState.Closed)
+                    con.Open();
+
+                SqlDataReader reader = cmdUsers.ExecuteReader();
+
+                string users = "";
+
+                while (reader.Read())
+                {
+                    users += "Username: " + reader["username"].ToString()
+                          + " | Password: " + reader["password"].ToString()
+                          + "\n";
+                }
+
+                reader.Close();
+
+                MessageBox.Show(users, "User List");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -76,10 +108,10 @@ namespace SalesManagementSystem
                 if (dr.Read()) 
                 {
                     MessageBox.Show("Welcome " + dr["fullname"].ToString() + "!", "ACCESS GRANTED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Form1 main = new Form1();
+                    mainForm main = new mainForm();
                     this.Hide();
                     main.ShowDialog();
-                    
+
                 }
             
                 else

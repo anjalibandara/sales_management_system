@@ -31,8 +31,10 @@ namespace SalesManagementSystem
             con.Open();
             dr = cmd.ExecuteReader();
             while (dr.Read())
+
             {
-                customerDataGridView1.Rows.Add(dr[0].ToString(), dr[0].ToString(), dr[1].ToString(), dr[2].ToString());
+                i += 1;
+                customerDataGridView1.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString());
             }
             dr.Close();
             con.Close();
@@ -42,14 +44,28 @@ namespace SalesManagementSystem
 
         }
 
+
         private void customerDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string colName = customerDataGridView1.Columns[e.ColumnIndex].Name;
             if (colName == "Edit")
             {
+                var row = customerDataGridView1.Rows[e.RowIndex];
+
+                // 🔥 DEBUG BEFORE ACCESS
+                MessageBox.Show(
+                    $"Raw Row Info:\n" +
+                    $"Cell0: {row.Cells[0].Value}\n" +
+                    $"Cell1: {row.Cells[1].Value}\n" +
+                    $"Cell2: {row.Cells[2].Value}\n" +
+                    $"Cell3: {row.Cells[3].Value}",
+                    "Before Reading Values",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
                 CustomerModuleForm customerModule = new CustomerModuleForm();
 
-                customerModule.textCId.Text = customerDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                customerModule.lblCId.Text = customerDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 customerModule.textCName.Text = customerDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 customerModule.textCPhone.Text = customerDataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
 
@@ -60,6 +76,7 @@ namespace SalesManagementSystem
                 LoadCustomer();
 
             }
+
             else if (colName == "Delete")
                 if (MessageBox.Show("Are you sure you want to delete this user?", "Delete User", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
@@ -74,10 +91,7 @@ namespace SalesManagementSystem
                 }
         }
 
-        //private void customerDataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        //{
 
-        //}
 
         private void label1_Click(object sender, EventArgs e)
         {

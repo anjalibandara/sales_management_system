@@ -92,7 +92,7 @@
             // 
             // btnSave
             // 
-            btnSave.BackColor = Color.Teal;
+            btnSave.BackColor = Color.Lime;
             btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(246, 363);
             btnSave.Name = "btnSave";
@@ -184,7 +184,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Red;
+            panel1.BackColor = Color.DeepSkyBlue;
             panel1.Controls.Add(pictureBoxClose);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Top;

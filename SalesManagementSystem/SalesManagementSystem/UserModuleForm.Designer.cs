@@ -59,7 +59,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Red;
+            panel1.BackColor = Color.DeepSkyBlue;
             panel1.Controls.Add(pictureBoxClose);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Top;

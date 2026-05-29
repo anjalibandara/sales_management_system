@@ -12,7 +12,8 @@ namespace SalesManagementSystem
             // see https://aka.ms/applicationconfiguration.
             Application.EnableVisualStyles();
             ApplicationConfiguration.Initialize();
-            Application.Run(new WelcomeForm());
+            //Application.Run(new WelcomeForm());
+            Application.Run(new categoryForm());
         }
     }
 }

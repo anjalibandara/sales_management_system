@@ -111,7 +111,7 @@ namespace SalesManagementSystem
                         "UPDATE tbCustomer SET cname=@cname, cphone=@cphone WHERE cid=@cid",
                         con);
 
-                    cm.Parameters.AddWithValue("@cid", textCId.Text);
+                    cm.Parameters.AddWithValue("@cid", Convert.ToInt32(lblCId.Text));
                     cm.Parameters.AddWithValue("@cname", textCName.Text);
                     cm.Parameters.AddWithValue("@cphone", textCPhone.Text);
 

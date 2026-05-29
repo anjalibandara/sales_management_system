@@ -79,7 +79,7 @@
             customerDataGridView1.Location = new Point(0, 0);
             customerDataGridView1.Name = "customerDataGridView1";
             customerDataGridView1.RowHeadersWidth = 51;
-            customerDataGridView1.Size = new Size(1020, 450);
+            customerDataGridView1.Size = new Size(1017, 450);
             customerDataGridView1.TabIndex = 0;
             customerDataGridView1.CellContentClick += customerDataGridView1_CellContentClick;
             // 

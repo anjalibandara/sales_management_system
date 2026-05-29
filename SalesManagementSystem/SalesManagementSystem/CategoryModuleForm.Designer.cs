@@ -57,7 +57,7 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.BackColor = Color.FromArgb(192, 192, 0);
+            btnUpdate.BackColor = SystemColors.HotTrack;
             btnUpdate.ForeColor = Color.White;
             btnUpdate.Location = new Point(372, 224);
             btnUpdate.Name = "btnUpdate";
@@ -100,7 +100,7 @@
             // 
             // btnSave
             // 
-            btnSave.BackColor = Color.Teal;
+            btnSave.BackColor = Color.SpringGreen;
             btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(236, 224);
             btnSave.Name = "btnSave";
@@ -128,7 +128,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Red;
+            panel1.BackColor = Color.DodgerBlue;
             panel1.Controls.Add(pictureBoxClose);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Top;

@@ -31,8 +31,10 @@ namespace SalesManagementSystem
             con.Open();
             dr = cmd.ExecuteReader();
             while (dr.Read())
+
             {
-                categoryDataGridView1.Rows.Add(dr[0].ToString(), dr[0].ToString(), dr[1].ToString(), dr[2].ToString());
+                i++;
+                categoryDataGridView1.Rows.Add(i, dr[0].ToString(), dr[1].ToString());
             }
             dr.Close();
             con.Close();

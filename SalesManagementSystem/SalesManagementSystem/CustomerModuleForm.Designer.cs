@@ -58,7 +58,7 @@
             // 
             // btnUpdate
             // 
-            btnUpdate.BackColor = Color.FromArgb(192, 192, 0);
+            btnUpdate.BackColor = SystemColors.HotTrack;
             btnUpdate.ForeColor = Color.White;
             btnUpdate.Location = new Point(382, 254);
             btnUpdate.Name = "btnUpdate";
@@ -92,7 +92,7 @@
             // 
             // btnSave
             // 
-            btnSave.BackColor = Color.Teal;
+            btnSave.BackColor = Color.SpringGreen;
             btnSave.ForeColor = Color.White;
             btnSave.Location = new Point(238, 254);
             btnSave.Name = "btnSave";
@@ -137,7 +137,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Red;
+            panel1.BackColor = Color.DodgerBlue;
             panel1.Controls.Add(pictureBoxClose);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Top;
@@ -157,11 +157,12 @@
             // lblCId
             // 
             lblCId.AutoSize = true;
-            lblCId.Location = new Point(23, 263);
+            lblCId.Location = new Point(65, 263);
             lblCId.Name = "lblCId";
             lblCId.Size = new Size(96, 20);
             lblCId.TabIndex = 28;
             lblCId.Text = "customer Id";
+            lblCId.Visible = false;
             lblCId.Click += lblCId_Click;
             // 
             // CustomerModuleForm
@@ -204,7 +205,7 @@
         private Label label3;
         private Panel panel1;
         private Label label1;
-        private Label lblCId;
         public TextBox textCId;
+        public Label lblCId;
     }
 }

@@ -47,8 +47,8 @@
             label1 = new Label();
             panel2 = new Panel();
             panelMain = new Panel();
-            pictureBox1 = new PictureBox();
             label11 = new Label();
+            pictureBox1 = new PictureBox();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnOrders).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnUsers).BeginInit();
@@ -62,6 +62,7 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.BackColor = Color.White;
+            flowLayoutPanel1.Controls.Add(label1);
             flowLayoutPanel1.Controls.Add(label10);
             flowLayoutPanel1.Controls.Add(label9);
             flowLayoutPanel1.Controls.Add(label8);
@@ -76,7 +77,6 @@
             flowLayoutPanel1.Controls.Add(label4);
             flowLayoutPanel1.Controls.Add(label3);
             flowLayoutPanel1.Controls.Add(label2);
-            flowLayoutPanel1.Controls.Add(label1);
             flowLayoutPanel1.Dock = DockStyle.Top;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -87,50 +87,60 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.BackColor = Color.Yellow;
+            label10.BackColor = Color.DeepSkyBlue;
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.ForeColor = SystemColors.ButtonHighlight;
             label10.Location = new Point(743, 87);
             label10.Name = "label10";
-            label10.Size = new Size(73, 20);
+            label10.Size = new Size(75, 20);
             label10.TabIndex = 22;
             label10.Text = "OREDERS";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.BackColor = Color.Yellow;
+            label9.BackColor = Color.DeepSkyBlue;
+            label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = SystemColors.ButtonHighlight;
             label9.Location = new Point(662, 87);
             label9.Name = "label9";
-            label9.Size = new Size(52, 20);
+            label9.Size = new Size(54, 20);
             label9.TabIndex = 21;
             label9.Text = "USERS";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.BackColor = Color.Yellow;
+            label8.BackColor = Color.DeepSkyBlue;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = SystemColors.ButtonHighlight;
             label8.Location = new Point(543, 87);
             label8.Name = "label8";
-            label8.Size = new Size(93, 20);
+            label8.Size = new Size(98, 20);
             label8.TabIndex = 20;
             label8.Text = "CATEGORIES";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.BackColor = Color.Yellow;
+            label7.BackColor = Color.DeepSkyBlue;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = SystemColors.ButtonHighlight;
             label7.Location = new Point(442, 87);
             label7.Name = "label7";
-            label7.Size = new Size(92, 20);
+            label7.Size = new Size(96, 20);
             label7.TabIndex = 19;
             label7.Text = "CUSTOMERS";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.BackColor = Color.Yellow;
+            label6.BackColor = Color.DeepSkyBlue;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.ButtonHighlight;
             label6.Location = new Point(345, 87);
             label6.Name = "label6";
-            label6.Size = new Size(75, 20);
+            label6.Size = new Size(79, 20);
             label6.TabIndex = 18;
             label6.Text = "PRODUCT";
             // 
@@ -202,14 +212,15 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.BackColor = Color.White;
+            label5.BackColor = Color.Transparent;
             label5.Font = new Font("Showcard Gothic", 28.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Red;
-            label5.Location = new Point(33, 28);
+            label5.ForeColor = Color.DeepSkyBlue;
+            label5.Location = new Point(48, 15);
             label5.Name = "label5";
             label5.Size = new Size(161, 59);
             label5.TabIndex = 0;
             label5.Text = "inter";
+            label5.Click += label5_Click;
             // 
             // label4
             // 
@@ -224,13 +235,14 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Brown;
-            label3.Location = new Point(0, 87);
+            label3.Font = new Font("Miriam CLM", 13.7999992F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 177);
+            label3.ForeColor = Color.DeepSkyBlue;
+            label3.Location = new Point(0, 74);
             label3.Name = "label3";
-            label3.Size = new Size(287, 31);
+            label3.Size = new Size(267, 25);
             label3.TabIndex = 12;
             label3.Text = "Sales Management System";
+            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -245,9 +257,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.White;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Showcard Gothic", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Red;
+            label1.ForeColor = Color.DodgerBlue;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.Size = new Size(71, 74);
@@ -257,7 +269,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.Red;
+            panel2.BackColor = Color.DeepSkyBlue;
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 482);
             panel2.Name = "panel2";
@@ -275,24 +287,25 @@
             panelMain.TabIndex = 2;
             panelMain.Paint += panelMain_Paint;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(374, 78);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(286, 167);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
             // label11
             // 
             label11.AutoSize = true;
+            label11.ForeColor = SystemColors.MenuHighlight;
             label11.Location = new Point(881, 324);
             label11.Name = "label11";
             label11.Size = new Size(149, 20);
             label11.TabIndex = 1;
             label11.Text = "@Copy Right VINTER";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(205, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(591, 344);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // mainForm
             // 
