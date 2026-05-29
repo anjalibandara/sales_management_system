@@ -26,6 +26,7 @@ namespace SalesManagementSystem
 
         public void LoadUser()
         {
+            int i = 0;
             dataGridView1.Rows.Clear();
             cmd = new SqlCommand("SELECT * FROM tbUser", con);
             con.Open();

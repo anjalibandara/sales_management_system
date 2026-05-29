@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             Button button1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
             pictureBoxClose = new PictureBox();
             label3 = new Label();
@@ -50,18 +51,19 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.Red;
-            button1.ForeColor = Color.Cyan;
+            button1.BackColor = Color.DeepSkyBlue;
+            button1.ForeColor = Color.White;
             button1.Location = new Point(13, 345);
             button1.Name = "button1";
             button1.Size = new Size(244, 41);
             button1.TabIndex = 5;
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Red;
+            panel1.BackColor = Color.DeepSkyBlue;
             panel1.Controls.Add(pictureBoxClose);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(pictureBox2);
@@ -72,11 +74,11 @@
             // 
             // pictureBoxClose
             // 
-            pictureBoxClose.Image = Properties.Resources.cancel;
-            pictureBoxClose.Location = new Point(243, 0);
+            pictureBoxClose.Image = (Image)resources.GetObject("pictureBoxClose.Image");
+            pictureBoxClose.Location = new Point(229, 0);
             pictureBoxClose.Name = "pictureBoxClose";
-            pictureBoxClose.Size = new Size(23, 31);
-            pictureBoxClose.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxClose.Size = new Size(37, 31);
+            pictureBoxClose.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxClose.TabIndex = 10;
             pictureBoxClose.TabStop = false;
             pictureBoxClose.Click += pictureBoxClose_Click;
@@ -84,7 +86,8 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(75, 24);
+            label3.ForeColor = SystemColors.ControlLightLight;
+            label3.Location = new Point(70, 34);
             label3.Name = "label3";
             label3.Size = new Size(186, 20);
             label3.TabIndex = 8;

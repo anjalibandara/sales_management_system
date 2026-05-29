@@ -47,12 +47,16 @@
             label1 = new Label();
             panel2 = new Panel();
             panelMain = new Panel();
+            pictureBox1 = new PictureBox();
+            label11 = new Label();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnOrders).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnUsers).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCategory).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCustomer).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnProduct).BeginInit();
+            panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -262,12 +266,33 @@
             // 
             // panelMain
             // 
+            panelMain.Controls.Add(label11);
+            panelMain.Controls.Add(pictureBox1);
             panelMain.Dock = DockStyle.Fill;
             panelMain.Location = new Point(0, 125);
             panelMain.Name = "panelMain";
             panelMain.Size = new Size(1042, 357);
             panelMain.TabIndex = 2;
             panelMain.Paint += panelMain_Paint;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(374, 78);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(286, 167);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(881, 324);
+            label11.Name = "label11";
+            label11.Size = new Size(149, 20);
+            label11.TabIndex = 1;
+            label11.Text = "@Copy Right VINTER";
             // 
             // mainForm
             // 
@@ -288,6 +313,9 @@
             ((System.ComponentModel.ISupportInitialize)btnCategory).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnCustomer).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnProduct).EndInit();
+            panelMain.ResumeLayout(false);
+            panelMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -311,5 +339,7 @@
         private UserControlButton btnUsers;
         private UserControlButton btnCategory;
         private UserControlButton btnCustomer;
+        private PictureBox pictureBox1;
+        private Label label11;
     }
 }

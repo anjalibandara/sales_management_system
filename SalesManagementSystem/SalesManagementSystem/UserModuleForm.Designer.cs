@@ -67,6 +67,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(697, 88);
             panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
             // 
             // pictureBoxClose
             // 
@@ -197,6 +198,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(513, 27);
             textBox1.TabIndex = 14;
+            textBox1.UseSystemPasswordChar = true;
             // 
             // label7
             // 

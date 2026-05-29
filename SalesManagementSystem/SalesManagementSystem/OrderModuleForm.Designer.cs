@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             pictureBoxClose = new PictureBox();
             label2 = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
+            lblOid = new Label();
+            label7 = new Label();
+            textCName = new TextBox();
+            label6 = new Label();
+            textCId = new TextBox();
             label5 = new Label();
             textSearchCust = new TextBox();
             label1 = new Label();
@@ -51,6 +56,20 @@
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
             panel4 = new Panel();
+            UDQty = new NumericUpDown();
+            btnClear = new Button();
+            btnInsert = new Button();
+            dtOrder = new DateTimePicker();
+            label13 = new Label();
+            textPName = new TextBox();
+            label12 = new Label();
+            textPId = new TextBox();
+            label11 = new Label();
+            label10 = new Label();
+            label9 = new Label();
+            textTotal = new TextBox();
+            label8 = new Label();
+            textPrice = new TextBox();
             label4 = new Label();
             textSearchProd = new TextBox();
             label3 = new Label();
@@ -61,6 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)customerDataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productDataGridView1).BeginInit();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)UDQty).BeginInit();
             SuspendLayout();
             // 
             // pictureBoxClose
@@ -99,6 +119,11 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(lblOid);
+            panel2.Controls.Add(label7);
+            panel2.Controls.Add(textCName);
+            panel2.Controls.Add(label6);
+            panel2.Controls.Add(textCId);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(textSearchCust);
             panel2.Controls.Add(label1);
@@ -106,14 +131,60 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 88);
             panel2.Name = "panel2";
-            panel2.Size = new Size(398, 420);
+            panel2.Size = new Size(398, 537);
             panel2.TabIndex = 6;
             panel2.Paint += panel2_Paint;
+            // 
+            // lblOid
+            // 
+            lblOid.AutoSize = true;
+            lblOid.Location = new Point(28, 449);
+            lblOid.Name = "lblOid";
+            lblOid.Size = new Size(61, 20);
+            lblOid.TabIndex = 11;
+            lblOid.Text = "label14";
+            lblOid.Visible = false;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(95, 336);
+            label7.Name = "label7";
+            label7.Size = new Size(135, 20);
+            label7.TabIndex = 10;
+            label7.Text = "Customer Name :";
+            // 
+            // textCName
+            // 
+            textCName.Enabled = false;
+            textCName.Location = new Point(104, 359);
+            textCName.Name = "textCName";
+            textCName.Size = new Size(282, 26);
+            textCName.TabIndex = 9;
+            textCName.TextChanged += textBox1_TextChanged_1;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(95, 273);
+            label6.Name = "label6";
+            label6.Size = new Size(106, 20);
+            label6.TabIndex = 8;
+            label6.Text = "Customer Id :";
+            // 
+            // textCId
+            // 
+            textCId.Enabled = false;
+            textCId.Location = new Point(104, 296);
+            textCId.Name = "textCId";
+            textCId.Size = new Size(282, 26);
+            textCId.TabIndex = 7;
+            textCId.TextChanged += textBox1_TextChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(150, 200);
+            label5.Location = new Point(104, 201);
             label5.Name = "label5";
             label5.Size = new Size(99, 20);
             label5.TabIndex = 5;
@@ -121,9 +192,9 @@
             // 
             // textSearchCust
             // 
-            textSearchCust.Location = new Point(261, 195);
+            textSearchCust.Location = new Point(207, 195);
             textSearchCust.Name = "textSearchCust";
-            textSearchCust.Size = new Size(125, 26);
+            textSearchCust.Size = new Size(179, 26);
             textSearchCust.TabIndex = 2;
             textSearchCust.TextChanged += textSearchCust_TextChanged;
             // 
@@ -151,14 +222,14 @@
             customerDataGridView1.AllowUserToAddRows = false;
             customerDataGridView1.BackgroundColor = Color.White;
             customerDataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 70, 160);
-            dataGridViewCellStyle1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            customerDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(0, 70, 160);
+            dataGridViewCellStyle3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            customerDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             customerDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             customerDataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column5, Column1, Column2 });
             customerDataGridView1.EnableHeadersVisualStyles = false;
@@ -198,14 +269,14 @@
             productDataGridView1.AllowUserToAddRows = false;
             productDataGridView1.BackgroundColor = Color.White;
             productDataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(0, 70, 160);
-            dataGridViewCellStyle2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            productDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(0, 70, 160);
+            dataGridViewCellStyle4.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            productDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             productDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             productDataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, Column3, Column4, Column6, Column7 });
             productDataGridView1.Dock = DockStyle.Top;
@@ -276,6 +347,20 @@
             // 
             // panel4
             // 
+            panel4.Controls.Add(UDQty);
+            panel4.Controls.Add(btnClear);
+            panel4.Controls.Add(btnInsert);
+            panel4.Controls.Add(dtOrder);
+            panel4.Controls.Add(label13);
+            panel4.Controls.Add(textPName);
+            panel4.Controls.Add(label12);
+            panel4.Controls.Add(textPId);
+            panel4.Controls.Add(label11);
+            panel4.Controls.Add(label10);
+            panel4.Controls.Add(label9);
+            panel4.Controls.Add(textTotal);
+            panel4.Controls.Add(label8);
+            panel4.Controls.Add(textPrice);
             panel4.Controls.Add(label4);
             panel4.Controls.Add(textSearchProd);
             panel4.Controls.Add(label3);
@@ -283,9 +368,135 @@
             panel4.Dock = DockStyle.Right;
             panel4.Location = new Point(416, 88);
             panel4.Name = "panel4";
-            panel4.Size = new Size(484, 420);
+            panel4.Size = new Size(484, 537);
             panel4.TabIndex = 3;
             panel4.Paint += panel4_Paint;
+            // 
+            // UDQty
+            // 
+            UDQty.Location = new Point(350, 325);
+            UDQty.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            UDQty.Name = "UDQty";
+            UDQty.Size = new Size(122, 26);
+            UDQty.TabIndex = 11;
+            UDQty.ValueChanged += numericUpDown1_ValueChanged;
+            // 
+            // btnClear
+            // 
+            btnClear.BackColor = Color.Red;
+            btnClear.ForeColor = Color.White;
+            btnClear.Location = new Point(350, 486);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(94, 39);
+            btnClear.TabIndex = 19;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
+            // 
+            // btnInsert
+            // 
+            btnInsert.BackColor = Color.Teal;
+            btnInsert.ForeColor = Color.White;
+            btnInsert.Location = new Point(57, 486);
+            btnInsert.Name = "btnInsert";
+            btnInsert.Size = new Size(112, 39);
+            btnInsert.TabIndex = 17;
+            btnInsert.Text = "Order Insert";
+            btnInsert.UseVisualStyleBackColor = false;
+            btnInsert.Click += btnSave_Click;
+            // 
+            // dtOrder
+            // 
+            dtOrder.CustomFormat = "dd/MM/YY";
+            dtOrder.Format = DateTimePickerFormat.Custom;
+            dtOrder.Location = new Point(17, 428);
+            dtOrder.Name = "dtOrder";
+            dtOrder.Size = new Size(289, 26);
+            dtOrder.TabIndex = 11;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(18, 339);
+            label13.Name = "label13";
+            label13.Size = new Size(123, 20);
+            label13.TabIndex = 16;
+            label13.Text = "Product Name :";
+            // 
+            // textPName
+            // 
+            textPName.Location = new Point(18, 365);
+            textPName.Name = "textPName";
+            textPName.Size = new Size(225, 26);
+            textPName.TabIndex = 15;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(17, 281);
+            label12.Name = "label12";
+            label12.Size = new Size(94, 20);
+            label12.TabIndex = 14;
+            label12.Text = "Product Id :";
+            // 
+            // textPId
+            // 
+            textPId.Location = new Point(17, 310);
+            textPId.Name = "textPId";
+            textPId.Size = new Size(226, 26);
+            textPId.TabIndex = 13;
+            textPId.TextChanged += textBox3_TextChanged;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(42, 405);
+            label11.Name = "label11";
+            label11.Size = new Size(100, 20);
+            label11.TabIndex = 12;
+            label11.Text = "Order Date :";
+            label11.Click += label11_Click;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(280, 327);
+            label10.Name = "label10";
+            label10.Size = new Size(43, 20);
+            label10.TabIndex = 10;
+            label10.Text = "Qty :";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(280, 365);
+            label9.Name = "label9";
+            label9.Size = new Size(50, 20);
+            label9.TabIndex = 8;
+            label9.Text = "Total :";
+            // 
+            // textTotal
+            // 
+            textTotal.Location = new Point(350, 362);
+            textTotal.Name = "textTotal";
+            textTotal.Size = new Size(122, 26);
+            textTotal.TabIndex = 7;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(280, 284);
+            label8.Name = "label8";
+            label8.Size = new Size(54, 20);
+            label8.TabIndex = 6;
+            label8.Text = "Price :";
+            // 
+            // textPrice
+            // 
+            textPrice.Location = new Point(350, 281);
+            textPrice.Name = "textPrice";
+            textPrice.Size = new Size(122, 26);
+            textPrice.TabIndex = 5;
             // 
             // label4
             // 
@@ -298,7 +509,7 @@
             // 
             // textSearchProd
             // 
-            textSearchProd.Location = new Point(190, 208);
+            textSearchProd.Location = new Point(190, 211);
             textSearchProd.Name = "textSearchProd";
             textSearchProd.Size = new Size(282, 26);
             textSearchProd.TabIndex = 3;
@@ -320,7 +531,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(900, 508);
+            ClientSize = new Size(900, 625);
             Controls.Add(panel2);
             Controls.Add(panel4);
             Controls.Add(panel1);
@@ -340,6 +551,7 @@
             ((System.ComponentModel.ISupportInitialize)productDataGridView1).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)UDQty).EndInit();
             ResumeLayout(false);
         }
 
@@ -369,5 +581,25 @@
         private TextBox textSearchProd;
         private Label label5;
         private Label label4;
+        private Label label6;
+        private Label label7;
+        private TextBox textCName;
+        private Label label10;
+        private Label label9;
+        private TextBox textTotal;
+        private Label label8;
+        private Label label12;
+        private Label label11;
+        private Label label13;
+        private TextBox textPName;
+        public Button btnClear;
+        public Button btnUpdate;
+        public Button btnInsert;
+        public Label lblOid;
+        public TextBox textPrice;
+        public TextBox textPId;
+        public NumericUpDown UDQty;
+        public DateTimePicker dtOrder;
+        public TextBox textCId;
     }
 }

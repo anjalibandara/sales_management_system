@@ -79,6 +79,7 @@
             dataGridView1.GridColor = SystemColors.HotTrack;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(1042, 326);
             dataGridView1.TabIndex = 0;

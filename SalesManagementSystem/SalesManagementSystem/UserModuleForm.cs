@@ -128,7 +128,7 @@ namespace SalesManagementSystem
                         MessageBoxIcon.Warning);
                     return;
                 }
-                if(MessageBox.Show(
+                if (MessageBox.Show(
                     "Are you sure you want to update this user?",
                     "Update User",
                     MessageBoxButtons.YesNo,
@@ -180,6 +180,11 @@ namespace SalesManagementSystem
         private void pictureBoxClose_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

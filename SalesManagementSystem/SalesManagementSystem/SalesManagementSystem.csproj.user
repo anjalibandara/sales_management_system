@@ -40,5 +40,8 @@
     <Compile Update="UserModuleForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="WelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -31,7 +31,8 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             panel1 = new Panel();
-            dataGridView1 = new DataGridView();
+            label7 = new Label();
+            orderGridView1 = new DataGridView();
             Column5 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
@@ -40,13 +41,19 @@
             Column4 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
-            Edit = new DataGridViewImageColumn();
             Delete = new DataGridViewImageColumn();
             panel2 = new Panel();
+            lblQty = new Label();
+            lblTotalAmount = new Label();
+            lblQty1 = new Label();
+            lblOQty = new Label();
+            label2 = new Label();
+            textSearch = new TextBox();
             label1 = new Label();
             btnAdd = new UserControlButton();
+            lblTotal = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)orderGridView1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnAdd).BeginInit();
             SuspendLayout();
@@ -54,19 +61,30 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(orderGridView1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1064, 256);
             panel1.TabIndex = 4;
             // 
-            // dataGridView1
+            // label7
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            label7.AutoSize = true;
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(885, 201);
+            label7.Name = "label7";
+            label7.Size = new Size(0, 20);
+            label7.TabIndex = 12;
+            label7.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // orderGridView1
+            // 
+            orderGridView1.AllowUserToAddRows = false;
+            orderGridView1.BackgroundColor = Color.White;
+            orderGridView1.BorderStyle = BorderStyle.None;
+            orderGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 70, 160);
             dataGridViewCellStyle1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -74,16 +92,18 @@
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column5, Column1, Column7, Column2, Column3, Column4, Column6, Column8, Edit, Delete });
-            dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.GridColor = SystemColors.HotTrack;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1064, 474);
-            dataGridView1.TabIndex = 0;
+            orderGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            orderGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            orderGridView1.Columns.AddRange(new DataGridViewColumn[] { Column5, Column1, Column7, Column2, Column3, Column4, Column6, Column8, Delete });
+            orderGridView1.EnableHeadersVisualStyles = false;
+            orderGridView1.GridColor = SystemColors.HotTrack;
+            orderGridView1.Location = new Point(-4, 0);
+            orderGridView1.Name = "orderGridView1";
+            orderGridView1.RowHeadersVisible = false;
+            orderGridView1.RowHeadersWidth = 51;
+            orderGridView1.Size = new Size(1064, 474);
+            orderGridView1.TabIndex = 0;
+            orderGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column5
             // 
@@ -146,16 +166,6 @@
             Column8.MinimumWidth = 6;
             Column8.Name = "Column8";
             // 
-            // Edit
-            // 
-            Edit.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Edit.HeaderText = "";
-            Edit.Image = (Image)resources.GetObject("Edit.Image");
-            Edit.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            Edit.MinimumWidth = 6;
-            Edit.Name = "Edit";
-            Edit.Width = 6;
-            // 
             // Delete
             // 
             Delete.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -169,6 +179,13 @@
             // panel2
             // 
             panel2.BackColor = Color.DodgerBlue;
+            panel2.Controls.Add(lblTotal);
+            panel2.Controls.Add(lblQty);
+            panel2.Controls.Add(lblTotalAmount);
+            panel2.Controls.Add(lblQty1);
+            panel2.Controls.Add(lblOQty);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(textSearch);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(btnAdd);
             panel2.Dock = DockStyle.Bottom;
@@ -178,13 +195,75 @@
             panel2.Size = new Size(1064, 127);
             panel2.TabIndex = 5;
             // 
+            // lblQty
+            // 
+            lblQty.AutoSize = true;
+            lblQty.ForeColor = Color.White;
+            lblQty.Location = new Point(647, 85);
+            lblQty.Name = "lblQty";
+            lblQty.Size = new Size(0, 20);
+            lblQty.TabIndex = 11;
+            lblQty.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // lblTotalAmount
+            // 
+            lblTotalAmount.AutoSize = true;
+            lblTotalAmount.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalAmount.ForeColor = Color.White;
+            lblTotalAmount.Location = new Point(771, 16);
+            lblTotalAmount.Name = "lblTotalAmount";
+            lblTotalAmount.Size = new Size(125, 19);
+            lblTotalAmount.TabIndex = 10;
+            lblTotalAmount.Text = "Total Amount :";
+            // 
+            // lblQty1
+            // 
+            lblQty1.AutoSize = true;
+            lblQty1.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblQty1.ForeColor = Color.White;
+            lblQty1.Location = new Point(634, 20);
+            lblQty1.Name = "lblQty1";
+            lblQty1.Size = new Size(47, 19);
+            lblQty1.TabIndex = 9;
+            lblQty1.Text = " Qty ";
+            // 
+            // lblOQty
+            // 
+            lblOQty.AutoSize = true;
+            lblOQty.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblOQty.ForeColor = Color.White;
+            lblOQty.Location = new Point(481, 82);
+            lblOQty.Name = "lblOQty";
+            lblOQty.Size = new Size(98, 19);
+            lblOQty.TabIndex = 8;
+            lblOQty.Text = "Order Qty :";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ControlLightLight;
+            label2.Location = new Point(18, 81);
+            label2.Name = "label2";
+            label2.Size = new Size(95, 21);
+            label2.TabIndex = 7;
+            label2.Text = "Search in :";
+            // 
+            // textSearch
+            // 
+            textSearch.Location = new Point(119, 79);
+            textSearch.Name = "textSearch";
+            textSearch.Size = new Size(300, 26);
+            textSearch.TabIndex = 6;
+            textSearch.TextChanged += textSearch_TextChanged;
+            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.DodgerBlue;
             label1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(46, 63);
+            label1.Location = new Point(12, 16);
             label1.Name = "label1";
             label1.Size = new Size(148, 23);
             label1.TabIndex = 3;
@@ -203,6 +282,15 @@
             btnAdd.TabStop = false;
             btnAdd.Click += btnAdd_Click;
             // 
+            // lblTotal
+            // 
+            lblTotal.AutoSize = true;
+            lblTotal.Location = new Point(788, 66);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(0, 20);
+            lblTotal.TabIndex = 12;
+            lblTotal.TextAlign = ContentAlignment.TopCenter;
+            // 
             // OrderForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
@@ -215,7 +303,8 @@
             Name = "OrderForm";
             Text = "OrderForm";
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)orderGridView1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnAdd).EndInit();
@@ -225,7 +314,7 @@
         #endregion
 
         private Panel panel1;
-        private DataGridView dataGridView1;
+        private DataGridView orderGridView1;
         private Panel panel2;
         private Label label1;
         private UserControlButton btnAdd;
@@ -237,7 +326,14 @@
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column8;
-        private DataGridViewImageColumn Edit;
         private DataGridViewImageColumn Delete;
+        private TextBox textSearch;
+        private Label label2;
+        private Label lblOQty;
+        private Label label7;
+        private Label lblQty;
+        private Label lblTotalAmount;
+        private Label lblQty1;
+        private Label lblTotal;
     }
 }
